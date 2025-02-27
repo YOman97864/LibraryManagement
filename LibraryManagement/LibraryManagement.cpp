@@ -39,7 +39,19 @@ void saveBooks() {
     file.close();
 }
 
-
+void addBook() {
+    Book b;
+    b.id = nextId++;
+    cout << "Title: "; getline(cin, b.title);
+    cout << "Author: "; getline(cin, b.author);
+    cout << "Genre: "; getline(cin, b.genre);
+    cout << "Year: "; cin >> b.year;
+    cout << "Available (1-yes, 0-no): "; cin >> b.available;
+    cout << "Rating: "; cin >> b.rating;
+    cin.ignore();
+    books.push_back(b);
+    saveBooks();
+}
 
 
 int main() {
