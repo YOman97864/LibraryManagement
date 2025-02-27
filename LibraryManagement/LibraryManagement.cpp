@@ -31,7 +31,13 @@ void loadBooks() {
 }
 
 
-
+void saveBooks() {
+    ofstream file("books.txt");
+    for (const auto& b : books) {
+        file << b.id << '\n' << b.title << '\n' << b.author << '\n' << b.genre << '\n' << b.year << '\n' << b.available << '\n' << b.rating << '\n';
+    }
+    file.close();
+}
 
 
 
