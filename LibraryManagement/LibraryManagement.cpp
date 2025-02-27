@@ -60,6 +60,16 @@ void listBooks() {
 }
 
 int main() {
-    
+    loadBooks();
+    int choice;
+    do {
+        cout << "1. Add book\n2. List books\n0. Exit\nChoice: ";
+        cin >> choice;
+        cin.ignore();
+        switch (choice) {
+        case 1: addBook(); break;
+        case 2: listBooks(); break;
+        }
+    } while (choice != 0);
     return 0;
 }
