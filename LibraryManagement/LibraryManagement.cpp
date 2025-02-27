@@ -53,6 +53,11 @@ void addBook() {
     saveBooks();
 }
 
+void listBooks() {
+    for (const auto& b : books) {
+        cout << b.id << ": " << b.title << " by " << b.author << " (" << b.year << ") " << (b.available ? "Available" : "Not Available") << " Rating: " << b.rating << endl;
+    }
+}
 
 int main() {
     
